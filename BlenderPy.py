@@ -144,9 +144,14 @@ def State_machine(turnon, switchnum):
         GPIO.cleanup() # cleanup all GPIO
 
 
-#Call function from Terminal with 
+#Call function from Terminal with
 
+def main():
+    #var1, var2 = raw_input("Enter two numbers here: ").split()
+    turnon, switchnum =  [int(x) for x in input("Enter two numbers here: ").split()]
 
-State_machine()
+    State_machine(turnon, switchnum)
 
+    return 0
 
+main()
